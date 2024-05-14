@@ -1,0 +1,41 @@
+{
+  "baseUrl": "",
+  "titlePrefix": "",
+  "titleSuffix": "",
+  "ignore": [
+    "_markbind/layouts/*",
+    "_markbind/logs/*",
+    "_site/*",
+    "site.json",
+    "*.md",
+    "*.njk",
+    ".git/*",
+    ".gitignore",
+    "node_modules/*"
+  ],
+  "pagesExclude": ["node_modules/*"],
+  "pages": [
+    {
+      "src": "index.md"
+    },
+    {
+      "glob": ["**/index.md", "**/*.md"]
+    }
+  ],
+  "plugins": ["algolia"],
+  "pluginsContext": {
+   "algolia": {
+      "apiKey": "772d7386c7a785f7a60fec5a096311ef",
+      "appId": "3DU4XTBX4T",
+      "indexName": "nus-tic2002-2020",
+      "searchParameters": {
+        "facetFilters": [["site:nus-cs2103-ay2324s2.github.io"], ["tags:admin", "tags:se-book-adapted", "tags:schedule"]]
+      }
+    }
+  },
+  "deploy": {
+    "message": "Site Update.",
+    "repo": "https://github.com/damithc/search-test.git",
+    "branch": "gh-pages"
+  }
+}
